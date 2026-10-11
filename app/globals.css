@@ -1605,8 +1605,7 @@ em {
   }
 
   .hslider__dots {
-    left: 1.5rem;
-    gap: 0.6rem;
+    display: none;
   }
 
   .hslider__dot {
