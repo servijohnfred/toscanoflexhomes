@@ -1,5 +1,6 @@
 import HeroSlider from '@/components/HeroSlider'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
             <a href="#contact" className="btn btn--gold">Work With Us</a>
           </div>
           <div className="home-about__image" data-reveal data-delay="2">
-            <img src="/images/team-photo.jpeg" alt="Laura and Ernesto Toscano - Toscano Flex Homes" className="home-about__img" />
+            <Image fill src="/images/team-photo.jpeg" alt="Laura and Ernesto Toscano - Toscano Flex Homes" className="home-about__img" sizes="(max-width: 900px) 100vw, 50vw" />
             <div className="home-about__badge">
               <span className="home-about__badge-top">Licensed</span>
               <span className="home-about__badge-num">Realtors</span>
@@ -95,7 +96,7 @@ export default function Home() {
         <div className="home-team__inner">
           <div className="home-team__card" data-reveal>
             <div className="home-team__img-wrap">
-              <img src="/images/laura.jpeg" alt="Laura Toscano - Realtor" className="home-team__img" />
+              <Image fill src="/images/laura.jpeg" alt="Laura Toscano - Realtor" className="home-team__img" sizes="120px" />
             </div>
             <div className="home-team__info">
               <p className="home-team__role">Realtor</p>
@@ -106,7 +107,7 @@ export default function Home() {
           </div>
           <div className="home-team__card" data-reveal data-delay="2">
             <div className="home-team__img-wrap">
-              <img src="/images/ernesto.jpeg" alt="Ernesto Toscano - Realtor" className="home-team__img" />
+              <Image fill src="/images/ernesto.jpeg" alt="Ernesto Toscano - Realtor" className="home-team__img" sizes="120px" />
             </div>
             <div className="home-team__info">
               <p className="home-team__role">Realtor</p>

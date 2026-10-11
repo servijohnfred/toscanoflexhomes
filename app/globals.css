@@ -825,12 +825,11 @@ em {
 
 .home-about__image {
   position: relative;
+  height: clamp(400px, 55vw, 680px);
 }
 
 .home-about__img {
-  width: 100%;
   border-radius: 10px;
-  height: clamp(400px, 55vw, 680px);
   object-fit: cover;
   object-position: center;
   background: var(--black-4);
@@ -910,6 +909,7 @@ em {
   width: 120px;
   height: 140px;
   overflow: hidden;
+  position: relative;
 }
 
 .home-team__img {

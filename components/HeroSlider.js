@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
+import Image from 'next/image'
 
 const slides = [
   {
@@ -56,10 +57,14 @@ export default function HeroSlider() {
             key={isActive ? `active-${current}` : i}
             className={`hslider__slide${isActive ? ' hslider__slide--active' : ''}`}
           >
-            <picture>
-              <source media="(max-width: 768px)" srcSet={s.mobileSrc} />
-              <img src={s.src} alt={s.alt} className="hslider__img" />
-            </picture>
+            <Image
+              fill
+              src={s.src}
+              alt={s.alt}
+              className="hslider__img"
+              sizes="100vw"
+              priority={i === 0}
+            />
           </div>
         )
       })}

@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const links = [
@@ -33,7 +34,7 @@ export default function Navbar() {
       <header className={`navbar${scrolled ? ' navbar--dark' : ''}${open ? ' navbar--menu-open' : ''}`}>
         <div className="navbar__inner">
           <Link href="/" className="navbar__logo" onClick={() => setOpen(false)}>
-            <img src="/images/logo.png" alt="Toscano Flex Homes" className="navbar__logo-img" />
+            <Image src="/images/logo.png" alt="Toscano Flex Homes" width={200} height={60} className="navbar__logo-img" />
           </Link>
         </div>
       </header>
@@ -53,7 +54,7 @@ export default function Navbar() {
         <div className="nav-panel__drawer">
           <p className="nav-panel__eyebrow">Toscano Flex Homes</p>
           <div className="nav-panel__logo">
-            <img src="/images/logo.png" alt="Toscano Flex Homes" className="nav-panel__logo-img" />
+            <Image src="/images/logo.png" alt="Toscano Flex Homes" width={220} height={70} className="nav-panel__logo-img" />
           </div>
           <ul className="nav-panel__list">
             {links.map((link) => (

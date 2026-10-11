@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__col footer__col--brand">
-          <img src="/images/logo.png" alt="Toscano Flex Homes" className="footer__logo-img" />
+          <Image src="/images/logo.png" alt="Toscano Flex Homes" width={250} height={70} className="footer__logo-img" />
           <p className="footer__tagline">Real Estate. Stronger Together.</p>
           <div className="footer__diamond-divider">
             <span></span>
@@ -60,7 +61,7 @@ export default function Footer() {
             </a></li>
           </ul>
           <div className="footer__brokerage">
-            <img src="/images/epique-logo.png" alt="Epique Realty" className="footer__epique-img" />
+            <Image src="/images/epique-logo.png" alt="Epique Realty" width={120} height={40} className="footer__epique-img" />
           </div>
         </div>
       </div>
