@@ -11,9 +11,9 @@ export const metadata = {
   keywords: 'Tri Cities WA Realtor, Kennewick Realtor, Pasco homes for sale, Richland Realtor, Spanish speaking Realtor Tri Cities, sell my house Tri Cities, buy home Tri Cities Washington, Washington State real estate, bilingual realtor Washington, Toscano Flex Homes',
   authors: [{ name: 'Toscano Flex Homes' }],
   creator: 'Toscano Flex Homes',
-  metadataBase: new URL('https://toscanoflexhomes.vercel.app'),
+  metadataBase: new URL('https://toscanoflexhomes.com'),
   alternates: {
-    canonical: 'https://toscanoflexhomes.vercel.app',
+    canonical: 'https://toscanoflexhomes.com',
   },
   openGraph: {
     title: 'Toscano Flex Homes | Tri-Cities WA Realtors',
