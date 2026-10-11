@@ -6,8 +6,8 @@ import LenisProvider from '@/components/LenisProvider'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata = {
-  title: 'Toscano Flex Homes | Tri-Cities WA Realtors | Kennewick, Pasco, Richland',
-  description: 'Laura and Ernesto Toscano are your trusted Realtors in Tri-Cities, WA. Buying, selling, or investing in Kennewick, Pasco, Richland and all of Washington State. Bilingual service in English and Spanish.',
+  title: 'Toscano Flex Homes | Tri-Cities WA Realtors',
+  description: 'Laura and Ernesto Toscano, trusted Realtors in Kennewick, Pasco and Richland WA. Buying, selling and investing in Washington State. English and Spanish service.',
   keywords: 'Tri Cities WA Realtor, Kennewick Realtor, Pasco homes for sale, Richland Realtor, Spanish speaking Realtor Tri Cities, sell my house Tri Cities, buy home Tri Cities Washington, Washington State real estate, bilingual realtor Washington, Toscano Flex Homes',
   authors: [{ name: 'Toscano Flex Homes' }],
   creator: 'Toscano Flex Homes',
@@ -72,6 +72,15 @@ const schemaOrg = {
     { '@type': 'City', name: 'Richland', containedIn: 'Washington' },
     { '@type': 'State', name: 'Washington' },
   ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '19:00',
+    },
+  ],
+  priceRange: '$$',
   knowsLanguage: ['en', 'es'],
   sameAs: [
     'https://www.instagram.com/toscanoflexhomes',
