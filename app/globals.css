@@ -1277,6 +1277,25 @@ em {
   margin-top: 0.5rem;
 }
 
+.contact-form__submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.contact-form__status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.contact-form__status--ok {
+  color: var(--gold);
+}
+
+.contact-form__status--error {
+  color: #e08a7a;
+}
+
 /* ----------------------------------------------------------------
    16. CTA STRIP
    ---------------------------------------------------------------- */
@@ -1491,6 +1510,24 @@ em {
   color: var(--ivory-3);
 }
 
+.footer__credit {
+  margin-top: 0.6rem;
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory-3);
+}
+
+.footer__credit a {
+  color: var(--gold);
+  transition: color 0.3s;
+}
+
+.footer__credit a:hover {
+  color: var(--gold-light);
+}
+
 /* ----------------------------------------------------------------
    18. BACK TO TOP
    ---------------------------------------------------------------- */
@@ -1633,7 +1670,8 @@ em {
 
   .home-team__img-wrap {
     width: 100%;
-    height: 220px;
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
 }
 

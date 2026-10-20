@@ -1,4 +1,5 @@
 import '@/app/globals.css'
+import { GoogleTagManager } from '@next/third-parties/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BackToTop from '@/components/BackToTop'
@@ -118,6 +119,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
+      <GoogleTagManager gtmId="GTM-KBRTPDT3" />
       <body>
         <LenisProvider>
           <ScrollReveal />

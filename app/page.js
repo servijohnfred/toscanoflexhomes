@@ -1,4 +1,5 @@
 import HeroSlider from '@/components/HeroSlider'
+import ContactForm from '@/components/ContactForm'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -86,6 +87,7 @@ export default function Home() {
               <span className="home-about__badge-top">Licensed</span>
               <span className="home-about__badge-num">Realtors</span>
               <span className="home-about__badge-bottom">WA #215918</span>
+              <span className="home-about__badge-bottom">WA #20115070</span>
             </div>
           </div>
         </div>
@@ -230,40 +232,7 @@ export default function Home() {
           </div>
 
           <div className="home-contact__right" data-reveal data-delay="2">
-            <form className="contact-form" action="/api/contact" method="POST">
-              <h3 className="contact-form__title">Send Us a Message</h3>
-              <div className="contact-form__row">
-                <div className="contact-form__group">
-                  <label className="contact-form__label" htmlFor="name">Full Name</label>
-                  <input className="contact-form__input" type="text" id="name" name="name" placeholder="Your full name" required />
-                </div>
-                <div className="contact-form__group">
-                  <label className="contact-form__label" htmlFor="phone">Phone Number</label>
-                  <input className="contact-form__input" type="tel" id="phone" name="phone" placeholder="(509) 000-0000" />
-                </div>
-              </div>
-              <div className="contact-form__row">
-                <div className="contact-form__group">
-                  <label className="contact-form__label" htmlFor="email">Email Address</label>
-                  <input className="contact-form__input" type="email" id="email" name="email" placeholder="your@email.com" required />
-                </div>
-                <div className="contact-form__group">
-                  <label className="contact-form__label" htmlFor="interest">I am interested in</label>
-                  <select className="contact-form__input contact-form__select" id="interest" name="interest">
-                    <option value="">Select an option</option>
-                    <option value="buying">Buying a Home</option>
-                    <option value="selling">Selling a Home</option>
-                    <option value="investing">Investing in Real Estate</option>
-                    <option value="other">Other / Just Exploring</option>
-                  </select>
-                </div>
-              </div>
-              <div className="contact-form__group">
-                <label className="contact-form__label" htmlFor="message">Message</label>
-                <textarea className="contact-form__input contact-form__textarea" id="message" name="message" rows="4" placeholder="Tell us how we can help..."></textarea>
-              </div>
-              <button type="submit" className="btn btn--gold contact-form__submit">Send Message</button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

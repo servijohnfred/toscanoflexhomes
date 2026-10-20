@@ -14,7 +14,7 @@ export default function Footer() {
             <span></span>
           </div>
           <p className="footer__desc">
-            Husband and wife Realtors helping buyers, sellers and investors across Kennewick, Pasco, Richland and all of Washington State. Bilingual service in English and Spanish. Licensed under Epique Realty.
+            Husband and wife Realtors helping buyers, sellers and investors across Kennewick, Pasco, Richland and all of Washington State. Bilingual service in English and Spanish. Licensed real estate brokers in Washington State. Brokered by Epique Realty.
           </p>
           <p className="footer__location">TRI-CITIES, WASHINGTON</p>
           <div className="footer__socials">
@@ -68,9 +68,12 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <p className="footer__copy">
-          &copy; {new Date().getFullYear()} Toscano Flex Homes. All rights reserved. License #215918. Brokered by Epique Realty.
+          &copy; {new Date().getFullYear()} Toscano Flex Homes. All rights reserved. License #215918 &amp; #20115070. Brokered by Epique Realty.
         </p>
         <p className="footer__area">Serving Tri-Cities WA: Kennewick, Pasco, Richland and all of Washington State.</p>
+        <p className="footer__credit">
+          Designed by <a href="https://www.mystaffhero.com" target="_blank" rel="noopener">My Staff Hero Marketing</a>
+        </p>
       </div>
     </footer>
   )
