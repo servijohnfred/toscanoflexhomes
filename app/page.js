@@ -86,8 +86,8 @@ export default function Home() {
             <div className="home-about__badge">
               <span className="home-about__badge-top">Licensed</span>
               <span className="home-about__badge-num">Realtors</span>
-              <span className="home-about__badge-bottom">WA #215918</span>
-              <span className="home-about__badge-bottom">WA #20115070</span>
+              <span className="home-about__badge-bottom">Laura · WA #20115070</span>
+              <span className="home-about__badge-bottom">Ernesto · WA #215918</span>
             </div>
           </div>
         </div>

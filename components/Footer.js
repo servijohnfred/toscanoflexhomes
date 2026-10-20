@@ -68,7 +68,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <p className="footer__copy">
-          &copy; {new Date().getFullYear()} Toscano Flex Homes. All rights reserved. License #215918 &amp; #20115070. Brokered by Epique Realty.
+          &copy; {new Date().getFullYear()} Toscano Flex Homes. All rights reserved. Laura Toscano, License #20115070. Ernesto Toscano, License #215918. Brokered by Epique Realty.
         </p>
         <p className="footer__area">Serving Tri-Cities WA: Kennewick, Pasco, Richland and all of Washington State.</p>
         <p className="footer__credit">
