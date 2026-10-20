@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { buildLeadEmail } from '@/lib/leadEmail'
 
 const INTEREST_LABELS = {
   buying: 'Buying a Home',
@@ -7,9 +8,6 @@ const INTEREST_LABELS = {
   investing: 'Investing in Real Estate',
   other: 'Other / Just Exploring',
 }
-
-const escapeHtml = (value) =>
-  String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 
 export async function POST(req) {
   try {
@@ -24,21 +22,16 @@ export async function POST(req) {
       return NextResponse.json({ ok: false, error: 'Name and email are required.' }, { status: 400 })
     }
 
+    const { subject, html, text } = buildLeadEmail({ name, phone, email, interest, message })
+
     const resend = new Resend(process.env.RESEND_API_KEY)
     const { error } = await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL || 'Toscano Flex Homes <onboarding@resend.dev>',
       to: (process.env.CONTACT_TO_EMAIL || 'toscanoflexhomes@gmail.com').split(',').map((e) => e.trim()),
       replyTo: email,
-      subject: `New lead: ${name} (${interest})`,
-      text: `Name: ${name}\nPhone: ${phone || '-'}\nEmail: ${email}\nInterested in: ${interest}\n\nMessage:\n${message || '-'}`,
-      html: `
-        <h2>New contact form submission</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone) || '-'}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Interested in:</strong> ${escapeHtml(interest)}</p>
-        <p><strong>Message:</strong><br />${escapeHtml(message).replace(/\n/g, '<br />') || '-'}</p>
-      `,
+      subject,
+      html,
+      text,
     })
 
     if (error) {
